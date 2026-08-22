@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="id" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Layanan - Dinas Koperasi &amp; UKM Kabupaten Bekasi</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#68de7a",
+                        "on-tertiary-container": "#4e3d00",
+                        "on-primary-fixed-variant": "#004882",
+                        "inverse-primary": "#a3c9ff",
+                        "outline": "#727781",
+                        "surface-variant": "#d3e4fe",
+                        "tertiary-container": "#cea600",
+                        "primary": "#003461",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#a3c9ff",
+                        "surface-container-highest": "#d3e4fe",
+                        "secondary-fixed": "#85fb93",
+                        "inverse-on-surface": "#eaf1ff",
+                        "gov-blue-deep": "#00335E",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#231b00",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#001c38",
+                        "on-surface": "#0b1c30",
+                        "surface-tint": "#27609d",
+                        "on-secondary-fixed-variant": "#00531c",
+                        "surface-container": "#e5eeff",
+                        "primary-fixed": "#d3e4ff",
+                        "surface": "#f8f9ff",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#82f890",
+                        "inverse-surface": "#213145",
+                        "tertiary-fixed": "#ffe086",
+                        "border-light": "#E2E8F0",
+                        "on-background": "#0b1c30",
+                        "on-primary-container": "#8abcff",
+                        "secondary": "#006e28",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-high": "#dce9ff",
+                        "surface-bright": "#f8f9ff",
+                        "on-primary": "#ffffff",
+                        "surface-subtle": "#F8F9FA",
+                        "primary-container": "#004b87",
+                        "on-secondary-container": "#00732a",
+                        "background": "#f8f9ff",
+                        "outline-variant": "#c2c6d1",
+                        "surface-container-low": "#eff4ff",
+                        "on-surface-variant": "#424750",
+                        "on-secondary-fixed": "#002107",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "tertiary-fixed-dim": "#edc225",
+                        "tertiary": "#735c00",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "section-padding": "80px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-sm": [
+                            "Public Sans"
+                        ],
+                        "body-md": [
+                            "Public Sans"
+                        ],
+                        "headline-lg-mobile": [
+                            "Hanken Grotesk"
+                        ],
+                        "body-lg": [
+                            "Public Sans"
+                        ],
+                        "display-lg": [
+                            "Hanken Grotesk"
+                        ],
+                        "headline-md": [
+                            "Hanken Grotesk"
+                        ],
+                        "headline-lg": [
+                            "Hanken Grotesk"
+                        ],
+                        "label-md": [
+                            "Public Sans"
+                        ]
+                    },
+                    "fontSize": {
+                        "label-sm": [
+                            "12px",
+                            {
+                                "lineHeight": "16px",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-lg-mobile": [
+                            "28px",
+                            {
+                                "lineHeight": "36px",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "display-lg": [
+                            "48px",
+                            {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "headline-lg": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "label-md": [
+                            "14px",
+                            {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "600"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+    <!-- Header (Shared Component) -->
+    <header
+        class="bg-surface dark:bg-inverse-surface border-b border-light dark:border-outline-variant sticky top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 md:h-20 max-w-container-max mx-auto shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]">
+        <div
+            class="font-headline-md text-headline-md font-bold text-gov-blue-deep dark:text-inverse-primary flex items-center gap-2">
+            <img src="asset/logo/logo-dinkopukm.png" alt="Logo Dinas Koperasi &amp; UKM"
+                class="h-9 md:h-12 w-auto object-contain">
+        </div>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-gutter h-full">
+            <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors h-full flex items-center"
+                href="beranda.html">Beranda</a>
+            <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors h-full flex items-center"
+                href="profil.html">Profil</a>
+            <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors h-full flex items-center"
+                href="berita.html">Berita &amp; PPID</a>
+            <a class="text-primary font-bold border-b-2 border-primary h-full flex items-center font-label-md text-label-md hover:text-primary transition-colors"
+                href="layanan.html">Layanan</a>
+            <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors h-full flex items-center"
+                href="kontak.html">Kontak</a>
+        </nav>
+        <div class="flex items-center gap-2 md:gap-base">
+            <a class="bg-gov-blue-deep text-on-primary font-label-md text-label-md px-3 md:px-6 py-2 rounded shadow-sm hover:bg-primary transition-colors flex items-center gap-1 md:gap-2 shrink-0"
+                href="https://simpum.bekasikab.go.id/">
+                <span class="hidden sm:inline">SIMPUM Login</span>
+                <span class="sm:hidden">SIMPUM</span>
+                <span class="material-symbols-outlined text-[18px]">login</span>
+            </a>
+            <button class="md:hidden text-on-surface p-2" id="mobile-menu-btn" aria-label="Buka menu">
+                <span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+            </button>
+        </div>
+    </header>
+    <!-- Mobile Nav Menu -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-surface dark:bg-inverse-surface border-b border-light dark:border-outline-variant sticky top-16 z-40 flex-col px-margin-mobile py-4 gap-1 shadow-md">
+        <a class="text-on-surface-variant font-label-md text-label-md py-3 border-b border-light/60"
+            href="beranda.html">Beranda</a>
+        <a class="text-on-surface-variant font-label-md text-label-md py-3 border-b border-light/60"
+            href="profil.html">Profil</a>
+        <a class="text-on-surface-variant font-label-md text-label-md py-3 border-b border-light/60"
+            href="berita.html">Berita &amp; PPID</a>
+        <a class="text-primary font-bold font-label-md text-label-md py-3 border-b border-light/60"
+            href="layanan.html">Layanan</a>
+        <a class="text-on-surface-variant font-label-md text-label-md py-3"
+            href="kontak.html">Kontak</a>
+    </nav>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            var menu = document.getElementById('mobile-menu');
+            var isOpen = menu.classList.contains('flex');
+            if (isOpen) {
+                menu.classList.remove('flex');
+                menu.classList.add('hidden');
+            } else {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            }
+        });
+    </script>
+    <main class="flex-grow flex flex-col">
+        <!-- Hero Banner Section (konsisten dengan beranda.html) -->
+        <section
+            class="relative w-full min-h-[32vh] md:min-h-[38vh] flex items-center justify-center overflow-hidden bg-gov-blue-deep text-on-primary">
+            <div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay bg-cover bg-center"
+                data-alt="Foto profesional bergaya terang menampilkan petugas layanan pemerintah sedang membantu warga pelaku usaha di meja layanan modern menggunakan tablet digital, dengan nuansa biru tua institusional dan pencahayaan alami. Suasana ramah dan efisien, merepresentasikan pelayanan publik yang transparan dan mudah diakses."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQNlhYJhQY6t1wu1p2zHuUGcobaUVJ-eOqx-fc2Beey0tZ8QoRehg1pVhfILkNrMaC-e1cSKWdFzjhb9VVrV3x-njcZ3H1kjj6y5S77A0LH3l1BFmXMje9_6CdOt22SKxERwaQLRLW9kp4th8LGQMY5_5oM5k_1GV6X_LrU9R9Ax5suaiTav5eDBuSPO7qVM713ea1VZD0t7aanpWMgMKlBRSEjyysu21XihRuP3cPb63eKf828TTQcA')">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-gov-blue-deep/90 to-gov-blue-deep/40 z-10"></div>
+            <div
+                class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-10 md:py-12 w-full">
+                <div class="flex flex-col gap-3 md:gap-4 max-w-2xl">
+                    <span
+                        class="font-label-md text-label-md text-primary-fixed uppercase tracking-widest flex items-center gap-2">
+                        <span class="w-8 h-[2px] bg-secondary-fixed-dim inline-block"></span>
+                        Kabupaten Bekasi
+                    </span>
+                    <h1
+                        class="font-display-lg text-[28px] leading-[36px] sm:text-[36px] sm:leading-[44px] md:text-[48px] md:leading-[56px] font-bold text-surface-container-lowest drop-shadow-sm">
+                        Layanan <span class="text-secondary-fixed-dim">Publik</span>
+                    </h1>
+                    <p class="font-body-lg text-sm sm:text-body-lg text-surface-variant max-w-xl opacity-90">
+                        Kami menyediakan berbagai layanan terpadu untuk mendukung pertumbuhan Koperasi dan Usaha
+                        Mikro, Kecil, dan Menengah (UMKM) di Kabupaten Bekasi.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section: Bento Grid -->
+        <section
+            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-padding w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+            <!-- Layanan Koperasi Card -->
+            <div
+                class="lg:col-span-4 bg-surface rounded-xl border border-light border-t-2 border-t-gov-blue-deep shadow-sm p-gutter flex flex-col hover:shadow-md transition-shadow relative overflow-hidden group">
+                <div
+                    class="absolute -right-12 -top-12 w-32 h-32 bg-surface-container rounded-full opacity-50 group-hover:scale-110 transition-transform">
+                </div>
+                <div class="flex items-center gap-base mb-gutter relative z-10">
+                    <div
+                        class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+                        <span class="material-symbols-outlined" data-icon="handshake" data-weight="fill"
+                            style="font-variation-settings: 'FILL' 1;">handshake</span>
+                    </div>
+                    <h2 class="font-headline-md text-headline-md text-gov-blue-deep">Layanan Koperasi</h2>
+                </div>
+                <ul class="space-y-3 relative z-10 flex-grow font-body-md text-body-md text-on-surface">
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm mt-1"
+                            data-icon="check_circle">check_circle</span>
+                        <span>Fasilitasi NIK &amp; Sertifikat Koperasi</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm mt-1"
+                            data-icon="check_circle">check_circle</span>
+                        <span>Pendataan Koperasi (ODS)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm mt-1"
+                            data-icon="check_circle">check_circle</span>
+                        <span>Fasilitasi Pembiayaan Koperasi</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm mt-1"
+                            data-icon="check_circle">check_circle</span>
+                        <span>Pelatihan &amp; Peningkatan Kapasitas SDM</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm mt-1"
+                            data-icon="check_circle">check_circle</span>
+                        <span>Pendampingan RAT (Rapat Anggota Tahunan)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm mt-1"
+                            data-icon="check_circle">check_circle</span>
+                        <span>Penyuluhan &amp; Pembentukan Koperasi Baru</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm mt-1"
+                            data-icon="check_circle">check_circle</span>
+                        <span>Pengawasan &amp; Penilaian Kesehatan Koperasi</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Layanan UMKM Card -->
+            <div
+                class="lg:col-span-8 bg-surface rounded-xl border border-light border-t-2 border-t-secondary shadow-sm p-gutter flex flex-col hover:shadow-md transition-shadow relative overflow-hidden group">
+                <div
+                    class="absolute -right-20 -bottom-20 w-48 h-48 bg-secondary-container rounded-full opacity-20 group-hover:scale-110 transition-transform">
+                </div>
+                <div class="flex items-center gap-base mb-gutter relative z-10">
+                    <div
+                        class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+                        <span class="material-symbols-outlined" data-icon="storefront" data-weight="fill"
+                            style="font-variation-settings: 'FILL' 1;">storefront</span>
+                    </div>
+                    <h2 class="font-headline-md text-headline-md text-gov-blue-deep">Layanan Usaha Mikro &amp; UMKM</h2>
+                </div>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 relative z-10 font-body-md text-body-md text-on-surface">
+                    <div class="flex items-start gap-2 p-2 rounded hover:bg-surface-subtle transition-colors">
+                        <span class="material-symbols-outlined text-secondary mt-1" data-icon="verified">verified</span>
+                        <span>Fasilitasi Sertifikasi Halal</span>
+                    </div>
+                    <div class="flex items-start gap-2 p-2 rounded hover:bg-surface-subtle transition-colors">
+                        <span class="material-symbols-outlined text-secondary mt-1"
+                            data-icon="copyright">copyright</span>
+                        <span>Fasilitasi HAKI (Merek, Cipta, dll)</span>
+                    </div>
+                    <div class="flex items-start gap-2 p-2 rounded hover:bg-surface-subtle transition-colors">
+                        <span class="material-symbols-outlined text-secondary mt-1" data-icon="campaign">campaign</span>
+                        <span>Fasilitasi Promosi &amp; Pameran</span>
+                    </div>
+                    <div class="flex items-start gap-2 p-2 rounded hover:bg-surface-subtle transition-colors">
+                        <span class="material-symbols-outlined text-secondary mt-1"
+                            data-icon="inventory_2">inventory_2</span>
+                        <span>Fasilitasi Kemasan &amp; Desain Produk</span>
+                    </div>
+                    <div class="flex items-start gap-2 p-2 rounded hover:bg-surface-subtle transition-colors">
+                        <span class="material-symbols-outlined text-secondary mt-1"
+                            data-icon="account_balance">account_balance</span>
+                        <span>Akses Pembiayaan &amp; Permodalan (KUR)</span>
+                    </div>
+                    <div class="flex items-start gap-2 p-2 rounded hover:bg-surface-subtle transition-colors">
+                        <span class="material-symbols-outlined text-secondary mt-1" data-icon="school">school</span>
+                        <span>Pelatihan Kewirausahaan &amp; Vokasi</span>
+                    </div>
+                    <div class="flex items-start gap-2 p-2 rounded hover:bg-surface-subtle transition-colors">
+                        <span class="material-symbols-outlined text-secondary mt-1"
+                            data-icon="qr_code_scanner">qr_code_scanner</span>
+                        <span>Fasilitasi Penerbitan NIB &amp; PIRT</span>
+                    </div>
+                    <div class="flex items-start gap-2 p-2 rounded hover:bg-surface-subtle transition-colors">
+                        <span class="material-symbols-outlined text-secondary mt-1"
+                            data-icon="digital_out_of_home">digital_out_of_home</span>
+                        <span>Digitalisasi UMKM &amp; Onboarding</span>
+                    </div>
+                    <div class="flex items-start gap-2 p-2 rounded hover:bg-surface-subtle transition-colors">
+                        <span class="material-symbols-outlined text-secondary mt-1" data-icon="groups">groups</span>
+                        <span>Klinik Bisnis &amp; Pendampingan Usaha</span>
+                    </div>
+                    <div class="flex items-start gap-2 p-2 rounded hover:bg-surface-subtle transition-colors">
+                        <span class="material-symbols-outlined text-secondary mt-1"
+                            data-icon="monitoring">monitoring</span>
+                        <span>Fasilitasi Uji Mutu &amp; BPOM</span>
+                    </div>
+                    <div class="flex items-start gap-2 p-2 rounded hover:bg-surface-subtle transition-colors">
+                        <span class="material-symbols-outlined text-secondary mt-1"
+                            data-icon="local_shipping">local_shipping</span>
+                        <span>Fasilitasi Kemitraan &amp; Rantai Pasok</span>
+                    </div>
+                    <div class="flex items-start gap-2 p-2 rounded hover:bg-surface-subtle transition-colors">
+                        <span class="material-symbols-outlined text-secondary mt-1" data-icon="database">database</span>
+                        <span>Pendataan UMKM Terpadu</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Inovasi Layanan Section -->
+            <div class="lg:col-span-12 mt-section-padding">
+                <div class="text-center mb-gutter">
+                    <span
+                        class="inline-block px-3 py-1 bg-surface-container rounded-full text-primary font-label-sm text-label-sm mb-2">Transformasi
+                        Digital</span>
+                    <h2 class="font-headline-lg text-headline-lg text-gov-blue-deep">Inovasi Layanan Publik</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mt-2">Menghadirkan
+                        kemudahan akses layanan melalui inovasi digital dan pendekatan personal.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-3 md:gap-gutter">
+                    <!-- SIMPUM Card -->
+                    <div
+                        class="bg-surface rounded-xl border border-light p-3 md:p-gutter shadow-sm relative overflow-hidden flex flex-col justify-between">
+                        <div
+                            class="absolute right-0 top-0 w-32 h-32 bg-gradient-to-bl from-primary-fixed to-transparent opacity-30 rounded-bl-full pointer-events-none">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2 md:gap-3 mb-2 md:mb-4">
+                                <div
+                                    class="w-9 h-9 md:w-12 md:h-12 rounded bg-primary text-on-primary flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-lg md:text-2xl"
+                                        data-icon="desktop_windows">desktop_windows</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-headline-md text-[16px] md:text-headline-md text-gov-blue-deep">SIMPUM</h3>
+                                    <p class="font-label-sm text-label-sm text-on-surface-variant hidden sm:block">Sistem Informasi
+                                        Manajemen Pelaku Usaha Mikro</p>
+                                </div>
+                            </div>
+                            <p class="font-body-md text-[13px] md:text-body-md text-on-surface mb-3 md:mb-6 hidden sm:block">Platform digital terintegrasi
+                                untuk pendaftaran daring, pembaruan data usaha, dan monitoring dashboard secara
+                                real-time. Memudahkan pelaku usaha mikro dalam mengakses berbagai fasilitasi dari
+                                pemerintah daerah tanpa perlu datang langsung ke kantor.</p>
+                        </div>
+                        <div class="mt-auto flex flex-col sm:flex-row items-start sm:items-center gap-2 md:gap-4">
+                            <a href="https://simpum.bekasikab.go.id/" target="_blank" rel="noopener noreferrer"
+                                class="bg-secondary text-on-secondary px-3 md:px-6 py-2 rounded font-label-md text-label-md hover:bg-secondary/90 transition-colors text-center w-full sm:w-auto">
+                                Akses SIMPUM
+                            </a>
+
+                            <a href="https://simpum.bekasikab.go.id/" target="_blank" rel="noopener noreferrer"
+                                class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1 hidden sm:flex">
+
+                                Pelajari lebih lanjut
+
+                                <span class="material-symbols-outlined text-sm">
+                                    arrow_forward
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Podcast Kopi Panas Card -->
+                    <div
+                        class="bg-inverse-surface text-inverse-on-surface rounded-xl p-3 md:p-gutter shadow-sm relative overflow-hidden flex flex-col justify-between">
+                        <!-- Simulated Glassmorphism Background Image -->
+                        <div class="absolute inset-0 z-0 opacity-20"
+                            data-alt="A modern, high-quality, softly lit broadcast or podcast studio setting. The scene features professional microphones and warm, inviting amber lighting contrasting with cool deep blue shadows, creating a sophisticated and professional public service atmosphere."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCerubOiuUbV_PYWuA_NjqilyBSOhM9V3oJ68SkFLO71FhVIhUmtfiZqlTdVLQqbwczqwj-UVHRePm8K-GQQz-PbEcEFVUoZS7SqvXX-SH6OC-vhvabpOsW_lOSLrLeZHLSkKXH3FAODJ78_H1td5jOygNAlGz0vCL-6_dWDuuL3k8zBhTQz7nP5S_eOBzzY100a7dRRGyREuO122ONv0WfYYa5nNFVPaKqolvpuy5urgajQPHTVczC_A')">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/80 to-transparent z-10 pointer-events-none">
+                        </div>
+                        <div class="relative z-20">
+                            <div class="flex items-center gap-2 md:gap-3 mb-2 md:mb-4">
+                                <div
+                                    class="w-9 h-9 md:w-12 md:h-12 rounded bg-surface-variant text-primary flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-lg md:text-2xl" data-icon="mic" data-weight="fill"
+                                        style="font-variation-settings: 'FILL' 1;">mic</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-headline-md text-[16px] md:text-headline-md text-inverse-primary">Podcast Kopi
+                                        Panas</h3>
+                                    <p class="font-label-sm text-label-sm text-inverse-on-surface/80 hidden sm:block">Konsultasi
+                                        Pelayanan dan Pendampingan Advokasi</p>
+                                </div>
+                            </div>
+                            <p class="font-body-md text-[13px] md:text-body-md text-inverse-on-surface/90 mb-3 md:mb-6 hidden sm:block">Layanan proaktif dan
+                                interaktif berupa bincang-bincang inspiratif, konsultasi langsung, serta pendampingan
+                                advokasi. Kami hadir lebih dekat melalui format tatap muka interaktif dan kunjungan
+                                langsung (On The Spot) ke sentra-sentra UMKM.</p>
+                        </div>
+                        <div class="relative z-20 mt-auto flex flex-col sm:flex-row items-start sm:items-center gap-2 md:gap-4">
+                            <a href="https://www.youtube.com/@LEMWASDKUKM" target="_blank" rel="noopener noreferrer"
+                                class="bg-surface text-primary px-3 md:px-6 py-2 rounded font-label-md text-label-md hover:bg-surface-variant transition-colors flex items-center justify-center gap-2 w-full sm:w-auto">
+
+                                <span class="material-symbols-outlined text-sm">
+                                    play_arrow
+                                </span>
+
+                                Tonton
+                            </a>
+
+                            <div class="flex gap-2 hidden sm:flex">
+                                <span class="px-2 py-1 bg-white/10 rounded text-xs font-medium backdrop-blur-sm">
+                                    Tatap Muka
+                                </span>
+
+                                <span class="px-2 py-1 bg-white/10 rounded text-xs font-medium backdrop-blur-sm">
+                                    On The Spot
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer (Shared Component) -->
+    <footer
+        class="bg-surface-container dark:bg-surface-container-highest w-full py-section-padding px-margin-mobile md:px-margin-desktop border-t border-light dark:border-outline-variant">
+        <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <div class="flex flex-col gap-4">
+                <div
+                    class="font-headline-md text-headline-md font-bold text-gov-blue-deep dark:text-inverse-primary flex items-center gap-2 mb-2">
+                    <span class="material-symbols-outlined text-3xl" data-weight="fill"
+                        style="font-variation-settings: 'FILL' 1;">account_balance</span>
+                    Dinas Koperasi &amp; UKM
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                    Pemerintah Kabupaten Bekasi<br />
+                    Komplek Perkantoran PemKab Bekasi, Gedung B2 Lt. 3<br />
+                    Jln. Deltamas Boulevard, Sukamahi, Cikarang Pusat, 17530
+                </p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="font-headline-md text-headline-md !text-[20px] text-gov-blue-deep mb-2">Tautan Cepat</h4>
+                <nav class="flex flex-col gap-3">
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="profil.html">Profil &amp; Struktur Organisasi</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="layanan.html">Layanan Koperasi &amp; UKM</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="berita.html">Berita &amp; PPID</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="https://www.lapor.go.id/" target="_blank" rel="noopener noreferrer">LAPOR!</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="kontak.html">Kontak Kami</a>
+                </nav>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="font-headline-md text-headline-md !text-[20px] text-gov-blue-deep mb-2">Layanan Informasi
+                </h4>
+                <a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors"
+                    href="tel:+622189970000">
+                    <span class="material-symbols-outlined bg-surface-container-high p-2 rounded-full">call</span>
+                    <span class="font-body-md text-body-md">(021) 8997-0000</span>
+                </a>
+                <a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors"
+                    href="mailto:dinkop_umkm@bekasikab.go.id">
+                    <span class="material-symbols-outlined bg-surface-container-high p-2 rounded-full">mail</span>
+                    <span class="font-body-md text-body-md">dinkop_umkm@bekasikab.go.id</span>
+                </a>
+                <a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors"
+                    href="https://www.instagram.com/dinkopukm_kabbekasi/" target="_blank" rel="noopener noreferrer">
+                    <span
+                        class="material-symbols-outlined bg-surface-container-high p-2 rounded-full">alternate_email</span>
+                    <span class="font-body-md text-body-md">@dinkopukm_kabbekasi</span>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto mt-12 pt-8 border-t border-outline-variant/30 text-center">
+            <p class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2026 Dinas Koperasi dan UKM Kabupaten Bekasi. Seluruh Hak Cipta Dilindungi.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

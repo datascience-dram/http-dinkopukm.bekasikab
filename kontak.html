@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Kontak Kami - Dinas Koperasi &amp; UKM Kabupaten Bekasi</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "gov-blue-deep": "#00335E",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#424750",
+                        "background": "#f8f9ff",
+                        "surface-container": "#e5eeff",
+                        "tertiary": "#735c00",
+                        "surface-container-high": "#dce9ff",
+                        "tertiary-fixed-dim": "#edc225",
+                        "primary-fixed-dim": "#a3c9ff",
+                        "on-background": "#0b1c30",
+                        "border-light": "#E2E8F0",
+                        "surface-variant": "#d3e4fe",
+                        "surface-tint": "#27609d",
+                        "secondary": "#006e28",
+                        "primary-fixed": "#d3e4ff",
+                        "secondary-fixed": "#85fb93",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#a3c9ff",
+                        "surface-container-highest": "#d3e4fe",
+                        "primary": "#003461",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#cea600",
+                        "on-primary-fixed": "#001c38",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-surface": "#0b1c30",
+                        "surface": "#f8f9ff",
+                        "on-secondary-fixed": "#002107",
+                        "surface-bright": "#f8f9ff",
+                        "surface-container-low": "#eff4ff",
+                        "surface-dim": "#cbdbf5",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#82f890",
+                        "inverse-surface": "#213145",
+                        "on-secondary-fixed-variant": "#00531c",
+                        "secondary-fixed-dim": "#68de7a",
+                        "tertiary-fixed": "#ffe086",
+                        "on-secondary-container": "#00732a",
+                        "inverse-on-surface": "#eaf1ff",
+                        "outline-variant": "#c2c6d1",
+                        "on-primary-container": "#8abcff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#004b87",
+                        "on-tertiary-fixed": "#231b00",
+                        "outline": "#727781",
+                        "on-tertiary-container": "#4e3d00",
+                        "on-primary-fixed-variant": "#004882",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-subtle": "#F8F9FA"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "section-padding": "80px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-sm": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "label-md": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-background font-body-md antialiased flex flex-col min-h-screen">
+    <!-- TopNavBar -->
+    <header
+        class="bg-surface dark:bg-inverse-surface border-b border-light dark:border-outline-variant sticky top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 md:h-20 max-w-container-max mx-auto shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]">
+        <div
+            class="font-headline-md text-headline-md font-bold text-gov-blue-deep dark:text-inverse-primary flex items-center gap-2">
+            <img src="asset/logo/logo-dinkopukm.png"
+                alt="Logo Dinas Koperasi &amp; UKM" class="h-9 md:h-12 w-auto object-contain">
+        </div>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex gap-gutter items-center h-full">
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors h-full flex items-center"
+                href="beranda.html">Beranda</a>
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors h-full flex items-center"
+                href="profil.html">Profil</a>
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors h-full flex items-center"
+                href="berita.html">Berita &amp; PPID</a>
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors h-full flex items-center"
+                href="layanan.html">Layanan</a>
+            <a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary h-full flex items-center hover:text-primary transition-colors"
+                href="kontak.html">Kontak</a>
+        </nav>
+        <div class="flex items-center gap-2 md:gap-base">
+            <a class="bg-gov-blue-deep text-on-primary font-label-md text-label-md px-3 md:px-6 py-2 rounded shadow-sm hover:bg-primary transition-colors flex items-center gap-1 md:gap-2 shrink-0"
+                href="https://simpum.bekasikab.go.id/">
+                <span class="hidden sm:inline">SIMPUM Login</span>
+                <span class="sm:hidden">SIMPUM</span>
+                <span class="material-symbols-outlined text-[18px]">login</span>
+            </a>
+            <button class="md:hidden text-on-surface p-2" id="mobile-menu-btn" aria-label="Buka menu">
+                <span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+            </button>
+        </div>
+    </header>
+    <!-- Mobile Nav Menu -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-surface dark:bg-inverse-surface border-b border-light dark:border-outline-variant sticky top-16 z-40 flex-col px-margin-mobile py-4 gap-1 shadow-md">
+        <a class="text-on-surface-variant font-label-md text-label-md py-3 border-b border-light/60"
+            href="beranda.html">Beranda</a>
+        <a class="text-on-surface-variant font-label-md text-label-md py-3 border-b border-light/60"
+            href="profil.html">Profil</a>
+        <a class="text-on-surface-variant font-label-md text-label-md py-3 border-b border-light/60"
+            href="berita.html">Berita &amp; PPID</a>
+        <a class="text-on-surface-variant font-label-md text-label-md py-3 border-b border-light/60"
+            href="layanan.html">Layanan</a>
+        <a class="text-primary font-bold font-label-md text-label-md py-3"
+            href="kontak.html">Kontak</a>
+    </nav>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            var menu = document.getElementById('mobile-menu');
+            var isOpen = menu.classList.contains('flex');
+            if (isOpen) {
+                menu.classList.remove('flex');
+                menu.classList.add('hidden');
+            } else {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            }
+        });
+    </script>
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section
+            class="bg-surface-container py-section-padding px-margin-mobile md:px-margin-desktop flex flex-col items-center justify-center text-center">
+            <h1 class="font-display-lg text-display-lg text-gov-blue-deep mb-4">Hubungi Kami</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Kami siap membantu dan mendengarkan Anda. Silakan hubungi kami melalui saluran resmi di bawah ini atau
+                kunjungi kantor kami untuk layanan langsung.
+            </p>
+        </section>
+        <!-- Contact Content -->
+        <section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="grid grid-cols-2 gap-4 md:gap-12">
+                <!-- Info & Map -->
+                <div class="flex flex-col gap-4 md:gap-8 col-span-2 md:col-span-1">
+                    <!-- Map Placeholder -->
+                    <div class="w-full h-40 md:h-64 bg-surface-variant rounded border border-light overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A highly detailed aerial or map view of Cikarang Pusat, Kabupaten Bekasi, focusing on the government district. The style is modern, bright, and professional, characteristic of official government mapping. Colors feature subtle blues, greens, and whites to match a corporate government aesthetic, conveying stability and accessibility."
+                            data-location="Cikarang Pusat, Kabupaten Bekasi"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmojaro3T1SPM22dNIc1mFFbkNPArCgHXO9moVHF94EoL7GAgMK0MVe2FgQpUpsx6wJ9uzBB1Oz2OdW2T3MZ1EQZiPjovdBAdFE6sexab1tf4hG-zWq59scrfpfisLW9rlzJ5hNB1Jv3KcLL32YwikUGTQOOlBTjEAvIc5ilFj8ukFl1-5Xbo-po3KIGcEgynrbQ9x_QIshpwnk-G4Fo9UzOWuMIgHZDlG5tVTeCEX4RkDGSMz50CYoA" />
+                    </div>
+                    <!-- Contact Details -->
+                    <div
+                        class="bg-surface border border-light rounded-lg p-4 md:p-6 shadow-[0_0_10px_rgba(0,0,0,0.02)] border-t-2 border-t-primary">
+                        <h2 class="font-headline-md text-headline-md text-gov-blue-deep mb-4 md:mb-6">Informasi Kontak</h2>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1"
+                                    data-icon="location_on">location_on</span>
+                                <div>
+                                    <h3 class="font-label-md text-label-md text-on-surface">Alamat</h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Gedung RMKS Praja
+                                        Adhikara, Sukamahi, Kecamatan Cikarang Pusat, Kabupaten Bekasi, Jawa Barat 17530
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-secondary mt-1" data-icon="chat">chat</span>
+                                <div>
+                                    <h3 class="font-label-md text-label-md text-on-surface">WhatsApp</h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">(Nomor WhatsApp resmi)
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1" data-icon="mail">mail</span>
+                                <div>
+                                    <h3 class="font-label-md text-label-md text-on-surface">Email</h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">
+                                        diskopukm@bekasikab.go.id</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1"
+                                    data-icon="alternate_email">alternate_email</span>
+                                <div>
+                                    <h3 class="font-label-md text-label-md text-on-surface">Instagram</h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">
+                                        @diskopukm_kabupatenbekasi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Form -->
+                <div class="bg-surface border border-light rounded-lg p-4 md:p-8 shadow-[0_0_10px_rgba(0,0,0,0.02)] col-span-2 md:col-span-1">
+                    <h2 class="font-headline-md text-headline-md text-gov-blue-deep mb-4 md:mb-6">Kirim Pesan</h2>
+                    <form class="flex flex-col gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label-md text-label-md text-on-surface" for="name">Nama Lengkap</label>
+                            <input
+                                class="w-full border border-outline-variant rounded px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-body-md bg-surface"
+                                id="name" placeholder="Masukkan nama Anda" type="text" />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label-md text-label-md text-on-surface" for="email">Email</label>
+                            <input
+                                class="w-full border border-outline-variant rounded px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-body-md bg-surface"
+                                id="email" placeholder="Masukkan email Anda" type="email" />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label-md text-label-md text-on-surface" for="subject">Subjek</label>
+                            <input
+                                class="w-full border border-outline-variant rounded px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-body-md bg-surface"
+                                id="subject" placeholder="Tentang apa pesan ini?" type="text" />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label-md text-label-md text-on-surface" for="message">Pesan</label>
+                            <textarea
+                                class="w-full border border-outline-variant rounded px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-body-md bg-surface resize-none"
+                                id="message" placeholder="Tuliskan pesan Anda di sini..." rows="5"></textarea>
+                        </div>
+                        <button
+                            class="bg-gov-blue-deep text-on-primary font-label-md text-label-md px-6 py-3 rounded hover:bg-primary-container transition-colors mt-2 w-full md:w-auto self-start"
+                            type="submit">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Alternative Channels -->
+        <section class="bg-surface-subtle py-section-padding px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-container-max mx-auto text-center">
+                <h2 class="font-headline-md text-headline-md text-gov-blue-deep mb-8">Layanan Pengaduan &amp; Informasi
+                </h2>
+                <div class="grid grid-cols-2 gap-3 md:gap-8">
+                    <!-- SIMPUM -->
+                    <div
+                        class="bg-surface border border-light rounded-lg p-4 md:p-8 flex flex-col items-center gap-2 md:gap-4 hover:shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-shadow border-t-2 border-t-secondary">
+                        <span class="material-symbols-outlined text-2xl md:text-4xl text-secondary"
+                            data-icon="support_agent">support_agent</span>
+                        <h3 class="font-headline-md text-[16px] md:text-headline-md text-on-surface">Portal SIMPUM</h3>
+                        <p class="font-body-md text-[13px] md:text-body-md text-on-surface-variant text-center hidden sm:block">
+                            Untuk layanan pengaduan terintegrasi, pendaftaran UMKM, dan bantuan layanan publik lainnya,
+                            silakan gunakan Portal SIMPUM kami.
+                        </p>
+                        <a class="text-secondary font-label-md text-label-md mt-2 md:mt-4 flex items-center gap-2 hover:underline"
+                            href="https://simpum.bekasikab.go.id/">
+                            Kunjungi SIMPUM <span class="material-symbols-outlined text-sm"
+                                data-icon="arrow_forward">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Podcast -->
+                    <div
+                        class="bg-surface border border-light rounded-lg p-4 md:p-8 flex flex-col items-center gap-2 md:gap-4 hover:shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-shadow border-t-2 border-t-primary">
+                        <span class="material-symbols-outlined text-2xl md:text-4xl text-primary" data-icon="mic">mic</span>
+                        <h3 class="font-headline-md text-[16px] md:text-headline-md text-on-surface">Podcast Kopi
+                            Panas</h3>
+                        <p class="font-body-md text-[13px] md:text-body-md text-on-surface-variant text-center hidden sm:block">
+                            Dengarkan obrolan santai seputar kebijakan, inovasi, dan kisah sukses UMKM Bekasi di Podcast
+                            Kopi Panas.
+                        </p>
+                        <a class="text-primary font-label-md text-label-md mt-2 md:mt-4 flex items-center gap-2 hover:underline"
+                            href="https://www.youtube.com/@LEMWASDKUKM">
+                            Dengarkan <span class="material-symbols-outlined text-sm"
+                                data-icon="arrow_forward">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container dark:bg-surface-container-highest w-full py-section-padding px-margin-mobile md:px-margin-desktop border-t border-light dark:border-outline-variant">
+        <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <div class="flex flex-col gap-4">
+                <div
+                    class="font-headline-md text-headline-md font-bold text-gov-blue-deep dark:text-inverse-primary flex items-center gap-2 mb-2">
+                    <span class="material-symbols-outlined text-3xl" data-weight="fill"
+                        style="font-variation-settings: 'FILL' 1;">account_balance</span>
+                    Dinas Koperasi &amp; UKM
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                    Pemerintah Kabupaten Bekasi<br />
+                    Komplek Perkantoran PemKab Bekasi, Gedung B2 Lt. 3<br />
+                    Jln. Deltamas Boulevard, Sukamahi, Cikarang Pusat, 17530
+                </p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="font-headline-md text-headline-md !text-[20px] text-gov-blue-deep mb-2">Tautan Cepat</h4>
+                <nav class="flex flex-col gap-3">
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="profil.html">Profil &amp; Struktur Organisasi</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="layanan.html">Layanan Koperasi &amp; UKM</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="berita.html">Berita &amp; PPID</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="https://www.lapor.go.id/" target="_blank" rel="noopener noreferrer">LAPOR!</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="kontak.html">Kontak Kami</a>
+                </nav>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="font-headline-md text-headline-md !text-[20px] text-gov-blue-deep mb-2">Layanan Informasi
+                </h4>
+                <a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors" href="tel:+622189970000">
+                    <span class="material-symbols-outlined bg-surface-container-high p-2 rounded-full">call</span>
+                    <span class="font-body-md text-body-md">(021) 8997-0000</span>
+                </a>
+                <a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors" href="mailto:dinkop_umkm@bekasikab.go.id">
+                    <span class="material-symbols-outlined bg-surface-container-high p-2 rounded-full">mail</span>
+                    <span class="font-body-md text-body-md">dinkop_umkm@bekasikab.go.id</span>
+                </a>
+                <a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors" href="https://www.instagram.com/dinkopukm_kabbekasi/" target="_blank" rel="noopener noreferrer">
+                    <span class="material-symbols-outlined bg-surface-container-high p-2 rounded-full">alternate_email</span>
+                    <span class="font-body-md text-body-md">@dinkopukm_kabbekasi</span>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto mt-12 pt-8 border-t border-outline-variant/30 text-center">
+            <p class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2026 Dinas Koperasi dan UKM Kabupaten Bekasi. Seluruh Hak Cipta Dilindungi.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

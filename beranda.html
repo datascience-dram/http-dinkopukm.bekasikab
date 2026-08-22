@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Beranda - Dinas Koperasi dan UKM Kabupaten Bekasi</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&amp;family=Hanken+Grotesk:wght@600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#68de7a",
+                        "on-tertiary-container": "#4e3d00",
+                        "on-primary-fixed-variant": "#004882",
+                        "inverse-primary": "#a3c9ff",
+                        "outline": "#727781",
+                        "surface-variant": "#d3e4fe",
+                        "tertiary-container": "#cea600",
+                        "primary": "#003461",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#a3c9ff",
+                        "surface-container-highest": "#d3e4fe",
+                        "secondary-fixed": "#85fb93",
+                        "inverse-on-surface": "#eaf1ff",
+                        "gov-blue-deep": "#00335E",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#231b00",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#001c38",
+                        "on-surface": "#0b1c30",
+                        "surface-tint": "#27609d",
+                        "on-secondary-fixed-variant": "#00531c",
+                        "surface-container": "#e5eeff",
+                        "primary-fixed": "#d3e4ff",
+                        "surface": "#f8f9ff",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#82f890",
+                        "inverse-surface": "#213145",
+                        "tertiary-fixed": "#ffe086",
+                        "border-light": "#E2E8F0",
+                        "on-background": "#0b1c30",
+                        "on-primary-container": "#8abcff",
+                        "secondary": "#006e28",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-high": "#dce9ff",
+                        "surface-bright": "#f8f9ff",
+                        "on-primary": "#ffffff",
+                        "surface-subtle": "#F8F9FA",
+                        "primary-container": "#004b87",
+                        "on-secondary-container": "#00732a",
+                        "background": "#f8f9ff",
+                        "outline-variant": "#c2c6d1",
+                        "surface-container-low": "#eff4ff",
+                        "on-surface-variant": "#424750",
+                        "on-secondary-fixed": "#002107",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "tertiary-fixed-dim": "#edc225",
+                        "tertiary": "#735c00",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "section-padding": "80px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Public Sans"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-md": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopNavBar -->
+    <header
+        class="bg-surface dark:bg-inverse-surface border-b border-light dark:border-outline-variant sticky top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 md:h-20 max-w-container-max mx-auto shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]">
+        <div
+            class="font-headline-md text-headline-md font-bold text-gov-blue-deep dark:text-inverse-primary flex items-center gap-2">
+            <img src="asset/logo/logo-dinkopukm.png"
+                alt="Logo Dinas Koperasi &amp; UKM" class="h-9 md:h-12 w-auto object-contain">
+        </div>
+        <nav class="hidden md:flex gap-gutter items-center">
+            <a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors opacity-80 duration-200"
+                href="beranda.html">Beranda</a>
+            <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors"
+                href="profil.html">Profil</a>
+            <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors"
+                href="berita.html">Berita &amp; PPID</a>
+            <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors"
+                href="layanan.html">Layanan</a>
+            <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors"
+                href="kontak.html">Kontak</a>
+        </nav>
+        <div class="flex items-center gap-2 md:gap-4">
+            <button
+                class="hidden lg:flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+            <a class="bg-gov-blue-deep text-on-primary font-label-md text-label-md px-3 md:px-6 py-2 rounded shadow-sm hover:bg-primary transition-colors flex items-center gap-1 md:gap-2 shrink-0"
+                href="https://simpum.bekasikab.go.id/" target="_blank" rel="noopener noreferrer">
+                <span class="hidden sm:inline">SIMPUM Login</span>
+                <span class="sm:hidden">SIMPUM</span>
+                <span class="material-symbols-outlined text-[18px]">login</span>
+            </a>
+            <button class="md:hidden text-on-surface-variant" id="mobile-menu-btn" aria-label="Buka menu">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </header>
+    <!-- Mobile Nav Menu -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-surface dark:bg-inverse-surface border-b border-light dark:border-outline-variant sticky top-16 z-40 flex-col px-margin-mobile py-4 gap-1 shadow-md">
+        <a class="text-primary font-bold font-label-md text-label-md py-3 border-b border-light/60"
+            href="beranda.html">Beranda</a>
+        <a class="text-on-surface-variant font-label-md text-label-md py-3 border-b border-light/60"
+            href="profil.html">Profil</a>
+        <a class="text-on-surface-variant font-label-md text-label-md py-3 border-b border-light/60"
+            href="berita.html">Berita &amp; PPID</a>
+        <a class="text-on-surface-variant font-label-md text-label-md py-3 border-b border-light/60"
+            href="layanan.html">Layanan</a>
+        <a class="text-on-surface-variant font-label-md text-label-md py-3"
+            href="kontak.html">Kontak</a>
+    </nav>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            var menu = document.getElementById('mobile-menu');
+            var isOpen = menu.classList.contains('flex');
+            if (isOpen) {
+                menu.classList.remove('flex');
+                menu.classList.add('hidden');
+            } else {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            }
+        });
+    </script>
+    <main>
+        <!-- Hero Section -->
+        <section
+            class="relative w-full min-h-[38vh] md:min-h-[45vh] flex items-center justify-center overflow-hidden bg-gov-blue-deep text-on-primary">
+            <div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay bg-cover bg-center"
+                data-alt="A professional, high-quality photograph of a bustling Indonesian SME (UKM) marketplace or cooperative office. The scene is well-lit with natural light streaming through windows, creating a bright, modern light-mode aesthetic. The color palette incorporates deep blues and subtle greens, reinforcing an authoritative yet accessible government tone. The mood is industrious, structured, and optimistic, capturing the essence of economic growth and community support."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApE_LIiBCN1aTu5xkhR00i8I3ziYmLcxUtU2kouaQP7xg1ITymmGbtgVqCEDxrpy9yiWzyPr46leqUO2jR2GuhY-JrCBpx46j2deE9MOlEGeW4wbPFy4D1dA4I5C_Cbl25pB3fUtqV5m3UdrCjg0kRUsvYd-2Aak2YezPRzO4Z9QoEZRjRPWTlXWj15nzbnNXu5O2MczicKHru6yOaRF5mTOoDhT2uwV82u2G7yyoCIpappKgaOvhjYQ')">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-gov-blue-deep/90 to-gov-blue-deep/40 z-10"></div>
+            <div
+                class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-10 md:py-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+                <div class="flex flex-col gap-4 md:gap-6">
+                    <span
+                        class="font-label-md text-label-md text-primary-fixed uppercase tracking-widest flex items-center gap-2">
+                        <span class="w-8 h-[2px] bg-secondary-fixed-dim inline-block"></span>
+                        Kabupaten Bekasi
+                    </span>
+                    <h1
+                        class="font-display-lg text-[28px] leading-[36px] sm:text-[36px] sm:leading-[44px] md:text-display-lg md:text-[56px] md:leading-[64px] font-bold text-surface-container-lowest drop-shadow-sm">
+                        Selamat Datang di Portal Resmi<br />
+                        <span class="text-secondary-fixed-dim">Dinas Koperasi dan UKM</span>
+                    </h1>
+                    <p class="font-body-lg text-sm sm:text-body-lg text-surface-variant max-w-xl opacity-90">
+                        Membangun ekosistem koperasi yang kuat dan memberdayakan Usaha Kecil Menengah (UKM) untuk
+                        pertumbuhan ekonomi Kabupaten Bekasi yang inklusif dan berkelanjutan.
+                    </p>
+                    <div class="flex flex-wrap gap-3 md:gap-4 mt-2 md:mt-4">
+                        <a class="bg-secondary-fixed-dim text-on-secondary-fixed-variant font-label-md text-label-md px-5 md:px-6 py-2.5 md:py-3 rounded-lg flex items-center gap-2 hover:bg-secondary-container transition-all hover:shadow-[0_4px_12px_rgba(104,222,122,0.3)]"
+                            href="#layanan">
+                            Jelajahi Layanan
+                            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                        </a>
+                        <a class="bg-surface-container/10 border border-surface-variant/30 text-surface-container-lowest font-label-md text-label-md px-5 md:px-6 py-2.5 md:py-3 rounded-lg flex items-center gap-2 hover:bg-surface-container/20 transition-all backdrop-blur-sm"
+                            href="#berita">
+                            Berita Terbaru
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section (Bento Grid Style) -->
+        <section class="py-10 md:py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+            id="layanan">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-gutter">
+                <!-- SIMPUM CTA -->
+                <div
+                    class="md:col-span-8 bg-surface-container-lowest rounded-xl border border-light shadow-[0_2px_8px_-4px_rgba(0,0,0,0.05)] overflow-hidden group relative flex flex-col md:flex-row items-center border-t-2 border-t-secondary-fixed-dim">
+                    <div class="p-6 md:p-10 flex-1 z-10 flex flex-col justify-center h-full">
+                        <div
+                            class="bg-secondary-container/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 md:mb-6">
+                            <span class="material-symbols-outlined text-secondary text-2xl" data-weight="fill"
+                                style="font-variation-settings: 'FILL' 1;">dataset</span>
+                        </div>
+                        <h2 class="font-headline-lg text-[22px] leading-[30px] md:text-headline-lg text-gov-blue-deep mb-3 md:mb-4">Sistem Informasi Manajemen
+                            Pemberdayaan UMKM (SIMPUM)</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 md:mb-8 max-w-md">
+                            Platform terintegrasi untuk pendaftaran, pendataan, dan pengajuan fasilitas pembinaan bagi
+                            pelaku UMKM di Kabupaten Bekasi.
+                        </p>
+                        <a class="inline-flex w-fit bg-gov-blue-deep text-on-primary font-label-md text-label-md px-6 py-3 rounded hover:bg-primary transition-colors items-center gap-2"
+                            href="https://simpum.bekasikab.go.id/" target="_blank" rel="noopener noreferrer">
+                            Akses SIMPUM
+                            <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                        </a>
+                    </div>
+                    <div class="w-full md:w-[40%] h-48 md:h-full relative overflow-hidden bg-surface-variant/30">
+                        <div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-700"
+                            data-alt="A clean, modern digital dashboard interface displayed on a sleek laptop screen, representing a government management system (SIMPUM). The laptop sits on a minimal wooden desk in a bright, modern light-mode office setting. The interface features data charts and clean UI elements in deep blues and greens. The overall aesthetic is corporate, professional, and technologically advanced, conveying efficiency and structured information architecture."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiMrUxQl7Lo5fMzm2MQN-wtHVmV0QZCWTj1NnsXFqDJuok3PKCsoeHymlud4W0Rp-Zv6dY4KeltaPHHuBfqr9m4aq-G_3FXkgLZ6pDOkNqeGZTbccQnhL3coUxniuigr9G7YnBdZL8ZOe2nW1wdqScmSh77jL8dKouYAYQ8IphNBXDk95Ga15Yv5pCNszk_UyXj1MYUykJRayAKi8Q_imn15cINiCpGVuymNE7b662LZorY2EhCLicFQ')">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest to-transparent hidden md:block">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent md:hidden block">
+                        </div>
+                    </div>
+                </div>
+                <!-- Kopi Panas Podcast CTA -->
+                <div
+                    class="md:col-span-4 bg-inverse-surface text-surface-container-lowest rounded-xl overflow-hidden relative group">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity group-hover:scale-105 transition-transform duration-700"
+                        data-alt="A professional podcasting setup featuring a high-quality studio microphone and soundproofing foam in the background. The scene is softly lit with warm, moody lighting, contrasting with the overarching light-mode corporate design to create a dedicated media space. The color palette focuses on deep blacks, warm ambers, and subtle blue highlights. The aesthetic is engaging, modern, and high-end, representing a government-run conversational media program (Kopi Panas)."
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBjW6WyyaDXLPmoNg1erFpCnOgbj0bZABFa4CmJy8eRZhsPkihN2D7U6b0NWxt7GBxJhVSYQoZdEFKOkEETgBLfTO6kGdCa6r6rt8hcdwm6ZE2EseW_dYmvkBdwkfbr8tRl6S7vPXZ5fVu614oRAwJwFuta8U5I6urWI4O6zLxjmuMM_kSeEpG5u1nZdakKjxpFpMdWubofCL-_KiIZ1t-nzhrMC_RYdpRQZvkRFKwzuJgC5QdqPuM9Ww')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/80 to-transparent">
+                    </div>
+                    <div class="relative z-10 p-6 md:p-8 h-full flex flex-col justify-end min-h-[280px] md:min-h-[360px]">
+                        <span
+                            class="bg-primary/80 text-inverse-primary font-label-sm text-label-sm px-3 py-1 rounded-full w-fit mb-3 md:mb-4 backdrop-blur-md border border-primary-container flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[14px]">mic</span>
+                            Media Informasi
+                        </span>
+                        <h3
+                            class="font-headline-md text-headline-md text-surface-container-lowest mb-2 flex items-center gap-2">
+                            Podcast Kopi Panas
+                        </h3>
+                        <p class="font-body-md text-body-md text-surface-variant/80 mb-4 md:mb-6 line-clamp-3">
+                            Obrolan santai namun berbobot seputar dunia koperasi, wirausaha, dan kebijakan publik
+                            bersama para ahli dan praktisi.
+                        </p>
+                        <a class="inline-flex w-fit items-center gap-2 text-secondary-fixed-dim hover:text-secondary-fixed transition-colors font-label-md text-label-md group/link"
+                            href="https://www.youtube.com/@LEMWASDKUKM">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary-fixed-dim/20 flex items-center justify-center group-hover/link:bg-secondary-fixed-dim/30 transition-colors">
+                                <span class="material-symbols-outlined" data-weight="fill"
+                                    style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            </div>
+                            Tonton Episode Terbaru
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Berita Terkini Section -->
+        <section class="py-10 md:py-section-padding bg-surface-subtle" id="berita">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 gap-4">
+                    <div>
+                        <span
+                            class="font-label-md text-label-md text-primary tracking-wider uppercase mb-2 block">Informasi
+                            Publik</span>
+                        <h2 class="font-headline-lg text-[24px] leading-[32px] md:text-headline-lg text-gov-blue-deep">Berita &amp; Kegiatan Terkini
+                        </h2>
+                    </div>
+                    <a class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1"
+                        href="berita.html">
+                        Lihat Semua Berita
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-gutter">
+                    <!-- Kartu Berita 1 -->
+                    <article
+                        class="bg-surface-container-lowest rounded-xl border border-light overflow-hidden hover:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.1)] transition-all group flex flex-col h-full border-t-2 border-t-gov-blue-deep">
+                        <div class="h-28 sm:h-40 md:h-48 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A group of individuals in a bright, modern corporate training room participating in a video production workshop. They are focused on cameras and laptops, set against a light-mode government aesthetic with white walls and subtle blue accents. The lighting is clean and professional, conveying a sense of skill-building and structured learning for SMEs."
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLgyK5oROSoTgeAGbcn9z1joQA2F0i0s-Kn7MDqRFN6mGk8GhNCDJnEmGoXheRGBoZ8dJj-2OwxaDNzREMibaGt9pmK26P4dZnpt-EviKFEAQRbxml0ov45CeGTLg8TH_S4btOW4n-Ya-Ln0YLOo2e7GVxs1-v97Kji02P-JNceuXTfBgZ3n99oX0rH-gBBiwQsQ6ttSQt82CRQxg0hDl_7jbTsq60j7FcWaj0_ozdh6JzYb_G4Bb-5Q')">
+                            </div>
+                            <div
+                                class="absolute top-2 left-2 sm:top-4 sm:left-4 bg-surface-container-lowest/90 backdrop-blur-sm px-2 sm:px-3 py-0.5 sm:py-1 rounded shadow-sm">
+                                <span class="font-label-sm text-[10px] sm:text-label-sm text-primary">Pelatihan</span>
+                            </div>
+                        </div>
+                        <div class="p-3 sm:p-4 md:p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-1.5 sm:gap-2 text-on-surface-variant mb-2 sm:mb-3">
+                                <span class="material-symbols-outlined text-[14px] sm:text-[16px]">calendar_today</span>
+                                <time class="font-label-sm text-[11px] sm:text-label-sm">24 Okt 2024</time>
+                            </div>
+                            <h3
+                                class="font-headline-md text-[14px] leading-[20px] sm:!text-[20px] sm:!leading-[28px] text-on-background mb-2 sm:mb-4 group-hover:text-primary transition-colors line-clamp-3">
+                                <a class="before:absolute before:inset-0" href="#">Pelatihan Pembuatan Video Profil Bagi
+                                    Pelaku UMKM Binaan</a>
+                            </h3>
+                            <div class="mt-auto hidden sm:block">
+                                <span
+                                    class="text-primary font-label-sm text-label-sm flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300">
+                                    Baca Selengkapnya
+                                    <span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Kartu Berita 2 -->
+                    <article
+                        class="bg-surface-container-lowest rounded-xl border border-light overflow-hidden hover:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.1)] transition-all group flex flex-col h-full border-t-2 border-t-gov-blue-deep">
+                        <div class="h-28 sm:h-40 md:h-48 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A formal government meeting or technical guidance session (Bimtek) focusing on product curation. A speaker stands before a screen in a well-lit, structured conference room. The atmosphere is professional and authoritative, featuring a light-mode aesthetic with deep blue corporate elements and clean white surfaces. The scene reflects institutional stability and detailed evaluation."
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzkWGKECIAVhUYoLTH9R2QDFffodZiuOFF8ZubNGj1pa5Wyf7p15Ky1pPG__3uFabEATkKvn4PhFp9OoVfcmVhtczgcH2I_N3yJNqe8w0EMdDgrZRVRD3cTiZbMvzJwAeobPSv5Bh8QpUpu4MA9ESr9FuRc94eKC7S14KE7Rq7kI_QfGscuaVRojwGoQSrdV73odI9MU2TPG1WjyhfoZ9QGsbnDeg_d7Rd16Kqup3lu_XGOvmEBkmnWQ')">
+                            </div>
+                            <div
+                                class="absolute top-2 left-2 sm:top-4 sm:left-4 bg-surface-container-lowest/90 backdrop-blur-sm px-2 sm:px-3 py-0.5 sm:py-1 rounded shadow-sm">
+                                <span class="font-label-sm text-[10px] sm:text-label-sm text-primary">Bimtek</span>
+                            </div>
+                        </div>
+                        <div class="p-3 sm:p-4 md:p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-1.5 sm:gap-2 text-on-surface-variant mb-2 sm:mb-3">
+                                <span class="material-symbols-outlined text-[14px] sm:text-[16px]">calendar_today</span>
+                                <time class="font-label-sm text-[11px] sm:text-label-sm">20 Okt 2024</time>
+                            </div>
+                            <h3
+                                class="font-headline-md text-[14px] leading-[20px] sm:!text-[20px] sm:!leading-[28px] text-on-background mb-2 sm:mb-4 group-hover:text-primary transition-colors line-clamp-3">
+                                <a class="before:absolute before:inset-0" href="#">Bimbingan Teknis Kurator Produk UMKM
+                                    Unggulan Daerah</a>
+                            </h3>
+                            <div class="mt-auto hidden sm:block">
+                                <span
+                                    class="text-primary font-label-sm text-label-sm flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300">
+                                    Baca Selengkapnya
+                                    <span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Kartu Berita 3 -->
+                    <article
+                        class="bg-surface-container-lowest rounded-xl border border-light overflow-hidden hover:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.1)] transition-all group flex flex-col h-full border-t-2 border-t-gov-blue-deep">
+                        <div class="h-28 sm:h-40 md:h-48 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A collaborative discussion around a large oval table in a bright, modern government office setting, symbolizing the coordination of a national cooperative initiative (Merah Putih). The participants are engaged in professional dialogue. The environment uses a light-mode aesthetic with crisp whites, subtle gray containers, and accents of institutional blue. The mood is constructive and official."
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBa7CucfQQcGSFDjOPqygvrDc7VIsV37XD1nhtADMHyzecLotEbAQ9eDa8S0ZMzz7YE8dxL1B7vTsguSC2Ql-X85lMSANxRG42rPnFzseMP0fpwb0UNDJtOOKyWUxz9RHKYII-UfoTo9PtWTbiwiHEfpIBP9-xsSbzh_fVJX9uDZtT8t93OrnmbvXQSQv4dHYNic8zIBYHmbLldpg7GbmqX4UUxIzFjcjrjGuQ57QFJWy6-MMsP4fjHCQ')">
+                            </div>
+                            <div
+                                class="absolute top-2 left-2 sm:top-4 sm:left-4 bg-surface-container-lowest/90 backdrop-blur-sm px-2 sm:px-3 py-0.5 sm:py-1 rounded shadow-sm">
+                                <span class="font-label-sm text-[10px] sm:text-label-sm text-primary">Koperasi</span>
+                            </div>
+                        </div>
+                        <div class="p-3 sm:p-4 md:p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-1.5 sm:gap-2 text-on-surface-variant mb-2 sm:mb-3">
+                                <span class="material-symbols-outlined text-[14px] sm:text-[16px]">calendar_today</span>
+                                <time class="font-label-sm text-[11px] sm:text-label-sm">15 Okt 2024</time>
+                            </div>
+                            <h3
+                                class="font-headline-md text-[14px] leading-[20px] sm:!text-[20px] sm:!leading-[28px] text-on-background mb-2 sm:mb-4 group-hover:text-primary transition-colors line-clamp-3">
+                                <a class="before:absolute before:inset-0" href="#">Rapat Koordinasi Persiapan
+                                    Pembentukan Koperasi Merah Putih</a>
+                            </h3>
+                            <div class="mt-auto hidden sm:block">
+                                <span
+                                    class="text-primary font-label-sm text-label-sm flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300">
+                                    Baca Selengkapnya
+                                    <span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Kartu Berita 4 -->
+                    <article
+                        class="bg-surface-container-lowest rounded-xl border border-light overflow-hidden hover:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.1)] transition-all group flex flex-col h-full border-t-2 border-t-secondary-fixed-dim">
+                        <div class="h-28 sm:h-40 md:h-48 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500"
+                                data-alt="An elegant award ceremony stage bathed in bright, clear lighting, highlighting a golden trophy or plaque (Becik Awards). The aesthetic is formal yet celebratory, maintaining the overarching light-mode corporate style with deep blue backgrounds and crisp white podiums. The mood is prestigious, recognizing excellence in the SME and cooperative sectors."
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBeh_9BVW5Znef_Y6r5JcusZURShI9pEFTRdQuNyWPeZ-OVrpbNzEwlK633pQrFy1fVAzU0Js0tryZ9U6Jc9HRggWhD2HDsCnVN5pJ67w9yYiAdC_T5tcFyvo251qSGT_4PwAJFxwPDrnDpnGpKv3oD3DGlr6UbZIepH1Czo2fqwgf9ojU1TEgeei80pWJ8otE6dLIymxr_XvdYEQfq_C6ixxjqWBiBbxYdXrGKinf1n4uIRDaRy1fNMQ')">
+                            </div>
+                            <div
+                                class="absolute top-2 left-2 sm:top-4 sm:left-4 bg-surface-container-lowest/90 backdrop-blur-sm px-2 sm:px-3 py-0.5 sm:py-1 rounded shadow-sm">
+                                <span class="font-label-sm text-[10px] sm:text-label-sm text-secondary-fixed-dim">Penghargaan</span>
+                            </div>
+                        </div>
+                        <div class="p-3 sm:p-4 md:p-6 flex flex-col flex-1">
+                            <div class="flex items-center gap-1.5 sm:gap-2 text-on-surface-variant mb-2 sm:mb-3">
+                                <span class="material-symbols-outlined text-[14px] sm:text-[16px]">calendar_today</span>
+                                <time class="font-label-sm text-[11px] sm:text-label-sm">10 Okt 2024</time>
+                            </div>
+                            <h3
+                                class="font-headline-md text-[14px] leading-[20px] sm:!text-[20px] sm:!leading-[28px] text-on-background mb-2 sm:mb-4 group-hover:text-primary transition-colors line-clamp-3">
+                                <a class="before:absolute before:inset-0" href="#">Malam Penganugerahan Becik Awards
+                                    Bagi Koperasi Berprestasi</a>
+                            </h3>
+                            <div class="mt-auto hidden sm:block">
+                                <span
+                                    class="text-primary font-label-sm text-label-sm flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300">
+                                    Baca Selengkapnya
+                                    <span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container dark:bg-surface-container-highest w-full py-10 md:py-section-padding px-margin-mobile md:px-margin-desktop border-t border-light dark:border-outline-variant">
+        <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-gutter">
+            <div class="flex flex-col gap-4">
+                <div
+                    class="font-headline-md text-headline-md font-bold text-gov-blue-deep dark:text-inverse-primary flex items-center gap-2 mb-2">
+                    <span class="material-symbols-outlined text-3xl" data-weight="fill"
+                        style="font-variation-settings: 'FILL' 1;">account_balance</span>
+                    Dinas Koperasi &amp; UKM
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                    Pemerintah Kabupaten Bekasi<br />
+                    Komplek Perkantoran PemKab Bekasi, Gedung B2 Lt. 3<br />
+                    Jln. Deltamas Boulevard, Sukamahi, Cikarang Pusat, 17530
+                </p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="font-headline-md text-headline-md !text-[20px] text-gov-blue-deep mb-2">Tautan Cepat</h4>
+                <nav class="flex flex-col gap-3">
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="profil.html">Profil &amp; Struktur Organisasi</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="layanan.html">Layanan Koperasi &amp; UKM</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="berita.html">Berita &amp; PPID</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="https://www.lapor.go.id/" target="_blank" rel="noopener noreferrer">LAPOR!</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant hover:underline transition-all"
+                        href="kontak.html">Kontak Kami</a>
+                </nav>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="font-headline-md text-headline-md !text-[20px] text-gov-blue-deep mb-2">Layanan Informasi
+                </h4>
+                <a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors" href="tel:+622189970000">
+                    <span class="material-symbols-outlined bg-surface-container-high p-2 rounded-full">call</span>
+                    <span class="font-body-md text-body-md">(021) 8997-0000</span>
+                </a>
+                <a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors" href="mailto:dinkop_umkm@bekasikab.go.id">
+                    <span class="material-symbols-outlined bg-surface-container-high p-2 rounded-full">mail</span>
+                    <span class="font-body-md text-body-md">dinkop_umkm@bekasikab.go.id</span>
+                </a>
+                <a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors" href="https://www.instagram.com/dinkopukm_kabbekasi/" target="_blank" rel="noopener noreferrer">
+                    <span class="material-symbols-outlined bg-surface-container-high p-2 rounded-full">alternate_email</span>
+                    <span class="font-body-md text-body-md">@dinkopukm_kabbekasi</span>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto mt-8 md:mt-12 pt-6 md:pt-8 border-t border-outline-variant/30 text-center">
+            <p class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2026 Dinas Koperasi dan UKM Kabupaten Bekasi. Seluruh Hak Cipta Dilindungi.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
