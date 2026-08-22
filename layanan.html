@@ -173,44 +173,91 @@
             }
         }
     </script>
+    <style>
+        /* ===== Navbar: transparan di atas hero, solid saat discroll (konsisten dengan beranda.html, profil.html & berita.html) ===== */
+        #site-header {
+            background-color: transparent;
+            border-bottom: 1px solid transparent;
+            box-shadow: none;
+            transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+
+        #site-header .nav-link {
+            color: rgba(255, 255, 255, 0.92);
+            transition: color 0.35s ease, border-color 0.35s ease;
+        }
+
+        #site-header .nav-link.active {
+            color: #ffffff;
+            border-color: #68de7a;
+        }
+
+        #site-header #mobile-menu-btn {
+            color: #ffffff;
+            transition: color 0.35s ease;
+        }
+
+        #site-header.is-scrolled {
+            background-color: #f8f9ff;
+            border-bottom-color: #E2E8F0;
+            box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.08);
+        }
+
+        #site-header.is-scrolled .nav-link {
+            color: #424750;
+        }
+
+        #site-header.is-scrolled .nav-link.active {
+            color: #003461;
+            border-color: #003461;
+        }
+
+        #site-header.is-scrolled #mobile-menu-btn {
+            color: #424750;
+        }
+    </style>
 </head>
 
 <body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
-    <!-- Header (Shared Component) -->
-    <header
-        class="bg-surface dark:bg-inverse-surface border-b border-light dark:border-outline-variant sticky top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 md:h-20 max-w-container-max mx-auto shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]">
-        <div
-            class="font-headline-md text-headline-md font-bold text-gov-blue-deep dark:text-inverse-primary flex items-center gap-2">
-            <img src="asset/logo/logo-dinkopukm.png" alt="Logo Dinas Koperasi &amp; UKM"
-                class="h-9 md:h-12 w-auto object-contain">
-        </div>
-        <!-- Desktop Nav -->
-        <nav class="hidden md:flex items-center gap-gutter h-full">
-            <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors h-full flex items-center"
-                href="beranda.html">Beranda</a>
-            <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors h-full flex items-center"
-                href="profil.html">Profil</a>
-            <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors h-full flex items-center"
-                href="berita.html">Berita &amp; PPID</a>
-            <a class="text-primary font-bold border-b-2 border-primary h-full flex items-center font-label-md text-label-md hover:text-primary transition-colors"
-                href="layanan.html">Layanan</a>
-            <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors h-full flex items-center"
-                href="kontak.html">Kontak</a>
-        </nav>
-        <div class="flex items-center gap-2 md:gap-base">
-            <a class="bg-gov-blue-deep text-on-primary font-label-md text-label-md px-3 md:px-6 py-2 rounded shadow-sm hover:bg-primary transition-colors flex items-center gap-1 md:gap-2 shrink-0"
-                href="https://simpum.bekasikab.go.id/">
-                <span class="hidden sm:inline">SIMPUM Login</span>
-                <span class="sm:hidden">SIMPUM</span>
-                <span class="material-symbols-outlined text-[18px]">login</span>
+    <!-- Header (Shared Component): fixed, transparan di atas hero, jadi solid saat scroll -->
+    <header id="site-header"
+        class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 md:h-20">
+        <div class="max-w-container-max mx-auto w-full flex justify-between items-center">
+            <!-- Logo kiri: Jabar -->
+            <a href="beranda.html" class="shrink-0 hidden sm:flex items-center" aria-label="Pemerintah Provinsi Jawa Barat">
+                <img src="asset/logo/logo-jabar.png" alt="Logo Provinsi Jawa Barat" class="h-12 md:h-16 w-auto object-contain">
             </a>
-            <button class="md:hidden text-on-surface p-2" id="mobile-menu-btn" aria-label="Buka menu">
-                <span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
-            </button>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex gap-gutter items-center mx-auto">
+                <a class="nav-link font-label-md text-label-md" href="beranda.html">Beranda</a>
+                <a class="nav-link font-label-md text-label-md flex items-center gap-1" href="profil.html">
+                    Profil
+                    <span class="material-symbols-outlined text-[18px]">expand_more</span>
+                </a>
+                <a class="nav-link font-label-md text-label-md" href="berita.html">Berita &amp; PPID</a>
+                <!-- ACTIVE TAB -->
+                <a class="nav-link active font-bold pb-1 border-b-2 font-label-md text-label-md flex items-center gap-1" href="layanan.html">
+                    Layanan
+                    <span class="material-symbols-outlined text-[18px]">expand_more</span>
+                </a>
+                <a class="nav-link font-label-md text-label-md" href="kontak.html">Kontak</a>
+            </nav>
+
+            <div class="flex items-center gap-3 md:gap-4">
+                <!-- Logo kanan: Dinkop & UKM -->
+                <a href="beranda.html" class="shrink-0 flex items-center" aria-label="Dinas Koperasi dan UKM Kabupaten Bekasi">
+                    <img src="asset/logo/logo-dinkopukm.png" alt="Logo Dinas Koperasi &amp; UKM"
+                        class="h-12 md:h-16 w-auto object-contain">
+                </a>
+                <button class="md:hidden" id="mobile-menu-btn" aria-label="Buka menu">
+                    <span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+                </button>
+            </div>
         </div>
     </header>
     <!-- Mobile Nav Menu -->
-    <nav id="mobile-menu" class="hidden md:hidden bg-surface dark:bg-inverse-surface border-b border-light dark:border-outline-variant sticky top-16 z-40 flex-col px-margin-mobile py-4 gap-1 shadow-md">
+    <nav id="mobile-menu" class="hidden md:hidden bg-surface dark:bg-inverse-surface border-b border-light dark:border-outline-variant fixed top-16 left-0 w-full z-40 flex-col px-margin-mobile py-4 gap-1 shadow-md">
         <a class="text-on-surface-variant font-label-md text-label-md py-3 border-b border-light/60"
             href="beranda.html">Beranda</a>
         <a class="text-on-surface-variant font-label-md text-label-md py-3 border-b border-light/60"
@@ -234,18 +281,36 @@
                 menu.classList.add('flex');
             }
         });
+
+        // Navbar transparan -> solid saat discroll (konsisten dengan beranda.html, profil.html & berita.html)
+        (function () {
+            var header = document.getElementById('site-header');
+            var THRESHOLD = 40;
+            function onScroll() {
+                if (window.scrollY > THRESHOLD) {
+                    header.classList.add('is-scrolled');
+                } else {
+                    header.classList.remove('is-scrolled');
+                }
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
     </script>
     <main class="flex-grow flex flex-col">
-        <!-- Hero Banner Section (konsisten dengan beranda.html) -->
+        <!-- Hero Banner Section (konsisten dengan beranda.html, profil.html & berita.html) -->
         <section
-            class="relative w-full min-h-[32vh] md:min-h-[38vh] flex items-center justify-center overflow-hidden bg-gov-blue-deep text-on-primary">
-            <div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay bg-cover bg-center"
+            class="relative w-full min-h-[42vh] md:min-h-[48vh] flex items-center overflow-hidden bg-gov-blue-deep text-on-primary">
+            <div class="absolute inset-0 z-0 bg-cover bg-center"
                 data-alt="Foto profesional bergaya terang menampilkan petugas layanan pemerintah sedang membantu warga pelaku usaha di meja layanan modern menggunakan tablet digital, dengan nuansa biru tua institusional dan pencahayaan alami. Suasana ramah dan efisien, merepresentasikan pelayanan publik yang transparan dan mudah diakses."
-                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQNlhYJhQY6t1wu1p2zHuUGcobaUVJ-eOqx-fc2Beey0tZ8QoRehg1pVhfILkNrMaC-e1cSKWdFzjhb9VVrV3x-njcZ3H1kjj6y5S77A0LH3l1BFmXMje9_6CdOt22SKxERwaQLRLW9kp4th8LGQMY5_5oM5k_1GV6X_LrU9R9Ax5suaiTav5eDBuSPO7qVM713ea1VZD0t7aanpWMgMKlBRSEjyysu21XihRuP3cPb63eKf828TTQcA')">
+                style="background-image: url('asset/logo/banner3.png')">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-r from-gov-blue-deep/90 to-gov-blue-deep/40 z-10"></div>
+            <!-- Gradient gelap dari kiri (untuk teks) memudar ke kanan -->
+            <div class="absolute inset-0 z-10 bg-gradient-to-r from-gov-blue-deep/95 via-gov-blue-deep/60 to-transparent"></div>
+            <!-- Gradient tambahan dari atas (untuk navbar transparan) memudar ke bawah -->
+            <div class="absolute inset-0 z-10 bg-gradient-to-b from-gov-blue-deep/80 via-transparent to-gov-blue-deep/30"></div>
             <div
-                class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-10 md:py-12 w-full">
+                class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-24 md:pt-28 pb-10 md:pb-12 w-full">
                 <div class="flex flex-col gap-3 md:gap-4 max-w-2xl">
                     <span
                         class="font-label-md text-label-md text-primary-fixed uppercase tracking-widest flex items-center gap-2">
