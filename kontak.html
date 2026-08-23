@@ -110,44 +110,91 @@
             }
         }
     </script>
+    <style>
+        /* ===== Navbar: transparan di atas hero, solid saat discroll (konsisten dengan beranda.html, profil.html, berita.html & layanan.html) ===== */
+        #site-header {
+            background-color: transparent;
+            border-bottom: 1px solid transparent;
+            box-shadow: none;
+            transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+
+        #site-header .nav-link {
+            color: rgba(255, 255, 255, 0.92);
+            transition: color 0.35s ease, border-color 0.35s ease;
+        }
+
+        #site-header .nav-link.active {
+            color: #ffffff;
+            border-color: #68de7a;
+        }
+
+        #site-header #mobile-menu-btn {
+            color: #ffffff;
+            transition: color 0.35s ease;
+        }
+
+        #site-header.is-scrolled {
+            background-color: #f8f9ff;
+            border-bottom-color: #E2E8F0;
+            box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.08);
+        }
+
+        #site-header.is-scrolled .nav-link {
+            color: #424750;
+        }
+
+        #site-header.is-scrolled .nav-link.active {
+            color: #003461;
+            border-color: #003461;
+        }
+
+        #site-header.is-scrolled #mobile-menu-btn {
+            color: #424750;
+        }
+    </style>
 </head>
 
 <body class="bg-background text-on-background font-body-md antialiased flex flex-col min-h-screen">
-    <!-- TopNavBar -->
-    <header
-        class="bg-surface dark:bg-inverse-surface border-b border-light dark:border-outline-variant sticky top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 md:h-20 max-w-container-max mx-auto shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]">
-        <div
-            class="font-headline-md text-headline-md font-bold text-gov-blue-deep dark:text-inverse-primary flex items-center gap-2">
-            <img src="asset/logo/logo-dinkopukm.png"
-                alt="Logo Dinas Koperasi &amp; UKM" class="h-9 md:h-12 w-auto object-contain">
-        </div>
-        <!-- Desktop Nav -->
-        <nav class="hidden md:flex gap-gutter items-center h-full">
-            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors h-full flex items-center"
-                href="beranda.html">Beranda</a>
-            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors h-full flex items-center"
-                href="profil.html">Profil</a>
-            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors h-full flex items-center"
-                href="berita.html">Berita &amp; PPID</a>
-            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors h-full flex items-center"
-                href="layanan.html">Layanan</a>
-            <a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary h-full flex items-center hover:text-primary transition-colors"
-                href="kontak.html">Kontak</a>
-        </nav>
-        <div class="flex items-center gap-2 md:gap-base">
-            <a class="bg-gov-blue-deep text-on-primary font-label-md text-label-md px-3 md:px-6 py-2 rounded shadow-sm hover:bg-primary transition-colors flex items-center gap-1 md:gap-2 shrink-0"
-                href="https://simpum.bekasikab.go.id/">
-                <span class="hidden sm:inline">SIMPUM Login</span>
-                <span class="sm:hidden">SIMPUM</span>
-                <span class="material-symbols-outlined text-[18px]">login</span>
+    <!-- TopNavBar: fixed, transparan di atas hero, jadi solid saat scroll -->
+    <header id="site-header"
+        class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 md:h-20">
+        <div class="max-w-container-max mx-auto w-full flex justify-between items-center">
+            <!-- Logo kiri: Jabar -->
+            <a href="beranda.html" class="shrink-0 hidden sm:flex items-center" aria-label="Pemerintah Provinsi Jawa Barat">
+                <img src="asset/logo/logo-jabar.png" alt="Logo Provinsi Jawa Barat" class="h-12 md:h-16 w-auto object-contain">
             </a>
-            <button class="md:hidden text-on-surface p-2" id="mobile-menu-btn" aria-label="Buka menu">
-                <span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
-            </button>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex gap-gutter items-center mx-auto">
+                <a class="nav-link font-label-md text-label-md" href="beranda.html">Beranda</a>
+                <a class="nav-link font-label-md text-label-md flex items-center gap-1" href="profil.html">
+                    Profil
+                    <span class="material-symbols-outlined text-[18px]">expand_more</span>
+                </a>
+                <a class="nav-link font-label-md text-label-md" href="berita.html">Berita &amp; PPID</a>
+                <a class="nav-link font-label-md text-label-md flex items-center gap-1" href="layanan.html">
+                    Layanan
+                    <span class="material-symbols-outlined text-[18px]">expand_more</span>
+                </a>
+                <!-- ACTIVE TAB -->
+                <a class="nav-link active font-bold pb-1 border-b-2 font-label-md text-label-md" href="kontak.html">Kontak</a>
+            </nav>
+
+            <div class="flex items-center gap-3 md:gap-4">
+                <!-- Logo kanan: Dinkop & UKM -->
+                <a href="beranda.html" class="shrink-0 flex items-center" aria-label="Dinas Koperasi dan UKM Kabupaten Bekasi">
+                    <img src="asset/logo/logo-dinkopukm.png" alt="Logo Dinas Koperasi &amp; UKM"
+                        class="h-12 md:h-16 w-auto object-contain">
+                </a>
+                <button class="md:hidden" id="mobile-menu-btn" aria-label="Buka menu">
+                    <span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+                </button>
+            </div>
         </div>
     </header>
     <!-- Mobile Nav Menu -->
-    <nav id="mobile-menu" class="hidden md:hidden bg-surface dark:bg-inverse-surface border-b border-light dark:border-outline-variant sticky top-16 z-40 flex-col px-margin-mobile py-4 gap-1 shadow-md">
+    <nav id="mobile-menu" class="hidden md:hidden bg-surface dark:bg-inverse-surface border-b border-light dark:border-outline-variant fixed top-16 left-0 w-full z-40 flex-col px-margin-mobile py-4 gap-1 shadow-md">
         <a class="text-on-surface-variant font-label-md text-label-md py-3 border-b border-light/60"
             href="beranda.html">Beranda</a>
         <a class="text-on-surface-variant font-label-md text-label-md py-3 border-b border-light/60"
@@ -171,16 +218,52 @@
                 menu.classList.add('flex');
             }
         });
+
+        // Navbar transparan -> solid saat discroll (konsisten dengan halaman lain)
+        (function () {
+            var header = document.getElementById('site-header');
+            var THRESHOLD = 40;
+            function onScroll() {
+                if (window.scrollY > THRESHOLD) {
+                    header.classList.add('is-scrolled');
+                } else {
+                    header.classList.remove('is-scrolled');
+                }
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
     </script>
     <main class="flex-grow">
-        <!-- Hero Section -->
+        <!-- Hero Banner Section (konsisten dengan beranda.html, profil.html, berita.html & layanan.html) -->
         <section
-            class="bg-surface-container py-section-padding px-margin-mobile md:px-margin-desktop flex flex-col items-center justify-center text-center">
-            <h1 class="font-display-lg text-display-lg text-gov-blue-deep mb-4">Hubungi Kami</h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                Kami siap membantu dan mendengarkan Anda. Silakan hubungi kami melalui saluran resmi di bawah ini atau
-                kunjungi kantor kami untuk layanan langsung.
-            </p>
+            class="relative w-full min-h-[42vh] md:min-h-[48vh] flex items-center overflow-hidden bg-gov-blue-deep text-on-primary">
+            <div class="absolute inset-0 z-0 bg-cover bg-center"
+                data-alt="Foto profesional bergaya terang menampilkan petugas layanan pemerintah membantu warga di meja resepsionis kantor dinas yang modern, dengan nuansa biru tua institusional dan pencahayaan alami. Suasana ramah dan terbuka, merepresentasikan kemudahan menghubungi dan berkomunikasi dengan instansi."
+                style="background-image: url('asset/logo/banner4.png')">
+            </div>
+            <!-- Gradient gelap dari kiri (untuk teks) memudar ke kanan -->
+            <div class="absolute inset-0 z-10 bg-gradient-to-r from-gov-blue-deep/95 via-gov-blue-deep/60 to-transparent"></div>
+            <!-- Gradient tambahan dari atas (untuk navbar transparan) memudar ke bawah -->
+            <div class="absolute inset-0 z-10 bg-gradient-to-b from-gov-blue-deep/80 via-transparent to-gov-blue-deep/30"></div>
+            <div
+                class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-24 md:pt-28 pb-10 md:pb-12 w-full">
+                <div class="flex flex-col gap-3 md:gap-4 max-w-2xl">
+                    <span
+                        class="font-label-md text-label-md text-primary-fixed uppercase tracking-widest flex items-center gap-2">
+                        <span class="w-8 h-[2px] bg-secondary-fixed-dim inline-block"></span>
+                        Kabupaten Bekasi
+                    </span>
+                    <h1
+                        class="font-display-lg text-[28px] leading-[36px] sm:text-[36px] sm:leading-[44px] md:text-[48px] md:leading-[56px] font-bold text-surface-container-lowest drop-shadow-sm">
+                        Hubungi <span class="text-secondary-fixed-dim">Kami</span>
+                    </h1>
+                    <p class="font-body-lg text-sm sm:text-body-lg text-surface-variant max-w-xl opacity-90">
+                        Kami siap membantu dan mendengarkan Anda. Silakan hubungi kami melalui saluran resmi di bawah
+                        ini atau kunjungi kantor kami untuk layanan langsung.
+                    </p>
+                </div>
+            </div>
         </section>
         <!-- Contact Content -->
         <section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
